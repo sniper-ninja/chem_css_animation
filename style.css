@@ -49,6 +49,8 @@ body {
   animation: animate 5s linear infinite;
 }
 
+/*Droplet*/
+
 .drop {
 	background: #00FFFF;
   z-index: 10;
@@ -86,6 +88,30 @@ body {
   top: -22px;
 }
 
+/*STart of Magnetic Stirrer*/
+.box{
+	position: absolute;
+	display: block;
+	width: 15%;
+	height: 3%;
+	top: 135px;
+	right: 41%;
+	background: white;
+	animation: animates 2.8s linear infinite;
+}
+
+@keyframes animates 
+{
+	0%
+	{
+		transform: rotateY(0deg);
+	}
+	100%
+	{
+		transform: rotateY(360deg);
+	}
+}
+/*End of Magnetic stirrer*/
 @keyframes animate {
   0% {
     transform: translate(-50%, -70%) rotate(0deg);
