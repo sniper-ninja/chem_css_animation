@@ -96,7 +96,8 @@ body {
 	height: 3%;
 	top: 135px;
 	right: 41%;
-	background: white;
+	background: #7d7979;
+    border-radius: 11px 11px 11px 11px;
 	animation: animates 2.8s linear infinite;
 }
 
@@ -112,6 +113,7 @@ body {
 	}
 }
 /*End of Magnetic stirrer*/
+
 @keyframes animate {
   0% {
     transform: translate(-50%, -70%) rotate(0deg);
