@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+}
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /*transform: translate(-50%, -50%) scale(1.6);*/
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+ /* border: 5px solid #fff;*/
+  box-shadow: 0 0 0 5px #fff;
+   /* box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+*/  /*  filter: blur(10px);*/
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.wave {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #B11226;
+  border-radius: 50%;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+}
+.wave:before,
+.wave:after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  background: #000;
+}
+.wave:before {
+  border-radius: 45%;
+  background: rgba(255, 255, 255, 1);
+  animation: animate 5s linear infinite;
+}
+.wave:after {
+  border-radius: 40%;
+ /* background: rgba(255, 255, 255, -5);*/
+  animation: animate 5s linear infinite;
+}
+
+.drop {
+	background: #00FFFF;
+  z-index: 10;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  top: -30px;
+  margin: 0 auto;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 20px;
+  -moz-animation-name: drip;
+  -webkit-animation-name: drip;
+  animation-name: drip;
+  background: white;
+  -moz-animation-timing-function: cubic-bezier(1, 0, 0.91, 0.19);
+  -webkit-animation-timing-function: cubic-bezier(1, 0, 0.91, 0.19);
+  animation-timing-function: cubic-bezier(1, 0, 0.91, 0.19);
+  -moz-animation-duration: 2.5s;
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.drop:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 30px solid rgba(255, 255, 255, 1);
+  top: -22px;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -70%) rotate(0deg);
+
+  }
+  50% {
+    transform: translate(-50%, -73%) rotate(180deg);
+  }
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+}
+}
+
+@keyframes drip {
+  to {
+    top: 300px;
+  }
+}
