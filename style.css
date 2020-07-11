@@ -170,10 +170,10 @@ body {
 .burette{
 	position: absolute;
 	display: block;
-	width: 6%;
+	width: 5%;
 	height: 40%;
 	top: 3%;
-	right: 47%;
+	right: 47.5%;
 	background: #00FFFF;
 	-moz-border-radius: 11px 11px 0px 0px;
     -webkit-border-radius: 11px 11px 0px 0px;
@@ -183,7 +183,7 @@ body {
 .burette:before {
     content: "";
     position: absolute;
-    width: 15px;
+    width: 24px;
     height: 0;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
