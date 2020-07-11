@@ -88,6 +88,84 @@ body {
   top: -22px;
 }
 
+.base{
+	position: absolute;
+	display: block;
+	width: 61%;
+	height: 5%;
+	top: 87%;
+	right: 7%;
+	background: #7d7979;
+	-moz-border-radius: 11px 11px 11px 11px;
+    -webkit-border-radius: 11px 11px 11px 11px;
+    border-radius: 11px 11px 11px 11px;
+}
+
+.base-block{
+	position: absolute;
+	display: block;
+	width: 13%;
+	height: 7%;
+	top: 80%;
+	right: 10%;
+	background: #4f4f4f;
+	-moz-border-radius: 11px 11px 0px 0px;
+    -webkit-border-radius: 11px 11px 0px 0px;
+    border-radius: 11px 11px 0px 0px;
+}
+
+.ring-stand{
+	position: absolute;
+	display: block;
+	width: 2%;
+	height: 75%;
+	top: 5%;
+	right: 15%;
+	background: #4f4f4f;
+	-moz-border-radius: 11px 11px 0px 0px;
+    -webkit-border-radius: 11px 11px 0px 0px;
+    border-radius: 11px 11px 0px 0px;
+}
+
+.hook{
+	position: absolute;
+	display: block;
+	width: 7%;
+	height: 5%;
+	top: 15%;
+	right: 13%;
+	background: #393838;
+	-moz-border-radius: 0px 0px 0px 0px;
+    -webkit-border-radius: 0px 0px 0px 0px;
+    border-radius: 0px 0px 0px 0px;
+}
+
+.rotating-hook{
+	position: absolute;
+	display: block;
+	width: 13px;
+	height: 9%;
+	top: 13%;
+	right: 12.5%;
+	background: #393838;
+	-moz-border-radius: 11px 11px 11px 11px;
+    -webkit-border-radius: 11px 11px 11px 11px;
+    border-radius: 11px 11px 11px 11px;
+}
+
+.clamp{
+	position: absolute;
+	display: block;
+	width: 39%;
+	height: 2%;
+	top: 16.5%;
+	right: 20%;
+	background: #393838;
+	-moz-border-radius: 0px 0px 0px 0px;
+    -webkit-border-radius: 0px 0px 0px 0px;
+    border-radius: 0px 0px 0px 0px;
+}
+
 /*STart of Magnetic Stirrer*/
 .box{
 	position: absolute;
