@@ -183,13 +183,64 @@ body {
 .burette:before {
     content: "";
     position: absolute;
-    width: 24px;
+    width: 12px;
     height: 0;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
+    border-left: 25.5px solid transparent;
+    border-right: 25.5px solid transparent;
     border-top: 33px solid #00FFFF;
+    -moz-border-left: 20px solid transparent;
+    -moz-border-right: 20px solid transparent;
+    -moz-border-top: 33px solid #00FFFF;
+    -webkit-border-left: 20px solid transparent;
+    -webkit-border-right: 20px solid transparent;
+    -webkit-border-top: 33px solid #00FFFF;
     top: 243px;
 }
+.burette-nosel{
+	z-index: 10;
+	position: absolute;
+	display: block;
+	width: 1.1%;
+	height: 5%;
+	top: 48%;
+	right: 49.5%;
+	background: white;
+}
+.nosel-rod{
+	z-index: 10;
+	position: absolute;
+	display: block;
+	width: 5%;
+	height: 2%;
+	top: 48%;
+	right: 47.5%;	
+	background: #393838;
+	-moz-border-radius: 11px 0px 0px 11px;
+    -webkit-border-radius: 11px 0px 0px 11px;
+    border-radius: 11px 0px 0px 11px;
+}
+.nosel-hook{
+	z-index: 10;
+	position: absolute;
+	display: block;
+	width: 1%;
+	height: 8%;
+	top: 45%;
+	right: 46.5%;
+	background: #5d5dca;
+	-moz-border-radius: 11px 11px 11px 11px;
+    -webkit-border-radius: 11px 11px 11px 11px;
+    border-radius: 11px 11px 11px 11px;
+}
+/*
+  .trapezoid {
+      border-bottom: 100px solid red;
+      border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+      height: 0;
+      width: 100px;
+    }
+*/
 
 /*STart of Magnetic Stirrer*/
 .box{
