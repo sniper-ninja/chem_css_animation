@@ -4,27 +4,144 @@
 	<meta charset="utf-8">
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.9.2/jquery-ui.min.js"></script>
 </head>
 <body>
 	<!-- 
 	 <div class="drop"></div>
   <div class="dropwave"></div> -->
-   <div class="drop" style="background-color: #00FFFF"></div>
+   <div class="drop" id="drop"></div>
 	<div class="circle">
-		<div class="wave">
+		<div class="wave" id="wave">
 			<div class="box">
 			</div>
 		</div>
 	</div>
-	<div class="base"></div>
-	<div class="base-block"></div>
-	<div class="ring-stand"></div>
-	<div class="hook"></div>
-	<div class="rotating-hook"></div>
-	<div class="clamp"></div>
-	<div class="burette"></div>
-	<div class="burette-nosel"></div>
-	<div class="nosel-rod"></div>
-	<div class="nosel-hook"></div>
+	<div class="circle-cap"></div>
+	<div class="stand">
+		<div class="base">
+			<div class="base-block"></div>
+			<div class="ring-stand"></div>
+			<div class="hook"></div>
+			<div class="rotating-hook"></div>
+			<div class="clamp"></div>
+		</div>
+		
+		
+		
+		
+		<div class="burette" id="burette"></div>
+		<div class="burette-bottom"></div>
+		<div class="glass"></div>
+		<!-- <div class="burette-nosel"></div> -->
+		<div class="nosel-rod">
+			<div class="nosel-hook"></div>
+		</div>
+	</div>
+	<div class="trapezoid"></div>
+	<div class="magnetic-stirrer-base">
+		<div class="magnetic-stirrer-top"></div>
+		<div class="switch1"></div>
+		<div class="switch2"></div>
+	</div>
+	
+	<label for="cars" id="car" style="color: white">Choose water level in ml:</label>
+
+<select id="select">
+	<option>Select option:</option>
+  <option value="4%">10ml</option>
+  <option value="8%">20ml</option>
+  <option value="12%">30ml</option>
+  <option value="16%">40ml</option>
+  <option value="20%">50ml</option>
+  <option value="24%">60ml</option>
+  <option value="28%">70ml</option>
+  <option value="32%">80ml</option>
+  <option value="36%">90ml</option>
+  <option value="40%">100ml</option>
+</select>
+<br>
+<br>
+<button type="button" onclick="changecolor()">Change color After titration</button>
+
+<br>
+<br>
+<label for="cars" id="car" style="color: white">Stopcock :</label>
+<select id="speed">
+	<option>Select option:</option>
+  <option value="1500000s">0deg</opdegtion>
+  <option value="15s">10deg</opdegtion>
+  <option value="11s">20deg</option>
+  <option value="8s">30deg</option>
+  <option value="7s">40deg</option>
+  <option value="5s">50deg</option>
+  <option value="4s">60deg</option>
+  <option value="3s">70deg</option>
+  <option value="2.5s">80deg</option>
+  <option value="2s">90deg</option>
+  <option value=".8s">100deg</option>
+</select>
+
+	<script type="text/javascript">
+	
+ document.getElementById('select').addEventListener('change', function() {
+  console.log('You selected: ', this.value);
+  document.getElementById("burette").style.height = this.value;
+});
+
+  document.getElementById('speed').addEventListener('change', function() {
+  console.log('You selected: ', this.value);
+  document.getElementById("drop").style.animationDuration = this.value;
+});
+
+ function changecolor(){
+ 	document.getElementById('wave').style.background = "blue";
+ }
+
+ $(function() {
+  /**
+   *	Function to determine whether the first element completely 
+   *  eclipses the second element
+   */
+  function collision($wave, $drop) {
+    var x1 = $drop.offset().left;
+    var y1 = $drop.offset().top;
+    var h1 = $drop.outerHeight(true);
+    var w1 = $drop.outerWidth(true);
+    var b1 = y1 + h1;
+    var r1 = x1 + w1;
+    var x2 = $wave.offset().left;
+    var y2 = $wave.offset().top;
+    var h2 = $wave.outerHeight(true);
+    var w2 = $wave.outerWidth(true);
+    var b2 = y2 + h2;
+    var r2 = x2 + w2;
+
+    return x1 > x2 && y1 > y2 && b1 < b2 && r1 < r2
+      ? true
+      : false
+  }
+
+  // draggable jQuery listener required jQuery UI
+  // Just used to illustrate the above
+  $('#drop,#wave').draggable({
+    drag: function() {
+      if (collision($('#drop'), $('#wave'))) {
+        $('#wave').text('Eclipsing').css({'background-color': 'grey'})
+        console.log('eclipsing')
+      } else {
+        $('#wave').text('Not eclipsing').css({'background-color': 'green'})
+        console.log('not eclipsing')
+      }
+
+      $('#result').text(collision($('#drop'), $('#wave')));
+  }
+});
+ 
+    
+});
+
+	</script>
 </body>
 </html>
