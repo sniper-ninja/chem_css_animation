@@ -36,6 +36,8 @@ body {
   position: absolute;
   top: 57%;
   right: 45.5%;
+  -moz-top: 56%;
+  -moz-right: 44.3%;
 }
 
 .circle-cap{
@@ -383,7 +385,7 @@ body {
     z-index: 2;
     position: absolute;
     top: 57%;
-    right: 43.8%;
+    right: 44%;
 }
 
 .indicator{
