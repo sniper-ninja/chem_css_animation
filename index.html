@@ -32,17 +32,16 @@
   C10,93 10,93 20,77"/>
  -->
   <div class="wave" id="wave">
-			<div class="box">
-			</div>
-		</div>
-		<div class="dum" id="dum"></div>
+			<div class="box"></div>
+  </div>
+  <!-- Just for adjustment with fluid -->
+  <div class="dum" id="dum"></div>
 </svg>
   </div>
+   
+   <!-- water droplet -->
    <div class="drop" id="drop"></div>
-	<div class="circle">
-		
-	</div>
-	
+
 	<div class="stand">
 		<div class="base">
 			<div class="base-block"></div>
@@ -51,9 +50,6 @@
 			<div class="rotating-hook"></div>
 			<div class="clamp"></div>
 		</div>
-		
-		
-		
 		
 		<div class="burette" id="burette"></div>
 		<div class="burette-bottom"></div>
@@ -105,7 +101,7 @@
 	<label for="cars" id="car" style="color: white">Choose water level in ml:</label>
 
 <select id="select">
-	<option>Select option:</option>
+  <option>Select option:</option>
   <option value="4%">10ml</option>
   <option value="8%">20ml</option>
   <option value="12%">30ml</option>
@@ -120,14 +116,13 @@
 <br>
 <br>
 <button type="button" onclick="changecolor()">Change color After titration</button>
-
 <br>
 <br>
 <label for="cars" id="car" style="color: white">Stopcock :</label>
 <select id="speed">
-	<option>Select option:</option>
-  <option value="1500s">0deg</opdegtion>
-  <option value="15s">10deg</opdegtion>
+	<option selected disabled>Select option:</option>
+  <option value="1500s">0deg</option>
+  <option value="15s">10deg</option>
   <option value="11s">20deg</option>
   <option value="8s">30deg</option>
   <option value="7s">40deg</option>
@@ -157,6 +152,9 @@
  	document.getElementById('wave').style.background = "blue";
  	document.getElementById('dum').style.background = "blue";
  }
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ // didn't used in actal program : if two div over lap then it changes color 
+ // i.e. logic : when droplet and wave overlap then it trigger some function's
 
  $(function() {
   /**
@@ -197,7 +195,7 @@
       $('#result').text(collision($('#drop'), $('#wave')));
   }
 });
- 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     
 });
 
