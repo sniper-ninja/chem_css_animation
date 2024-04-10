@@ -10,7 +10,7 @@ You can view a live demo of this simulation [here](https://sniper-ninja.github.i
 
 To run the simulation, follow these steps:
 
-1. Clone this repository to your local machine using `git clone https://github.com/yourusername/titration-simulation.git`.
+1. Clone this repository to your local machine using `git clone https://github.com/sniper-ninja/chem_css_animation.git`.
 2. Open the `index.html` file in your web browser.
 
 ## Usage
